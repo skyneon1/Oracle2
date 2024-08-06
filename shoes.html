@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoes - Offer Oracle</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="oo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 50px;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .navbar {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .navbar li {
+            position: relative;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #ff6347;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            min-width: 150px;
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .navbar li:hover .dropdown-content {
+            display: block;
+        }
+
+        .icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .icons a {
+            color: #333;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+
+        .icons a:hover {
+            color: #ff6347;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            max-width: 300px;
+            margin: 10px;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card h4, .card h3, .card p {
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .card h4 a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                display: none;
+            }
+
+            .navbar.active {
+                display: flex;
+            }
+
+            #menu-icon {
+                display: block;
+                font-size: 24px;
+                cursor: pointer;
+            }
+        }
+
+        #menu-icon {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Offer Oracle</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <ul class="navbar">
+            <li>
+                <a href="#categories">Categories</a>
+                <div class="dropdown-content">
+                    <a href="shoes.html">Shoes</a>
+                    <a href="CLOTH.HTML">Clothing</a>
+                    <a href="#">Watches</a>
+                    <a href="#">Skincare</a>
+                    <a href="#">Perfume</a>
+                    <a href="#">More...</a>
+                </div>
+            </li>
+            <li><a href="#top-brands">Top Brands</a>
+                <div class="dropdown-content">
+                    <a href="#">Gucci</a>
+                    <a href="#">Chanel</a>
+                    <a href="#">Prada</a>
+                    <a href="#">Christian Dior</a>
+                </div>
+            </li>
+            <li><a href="#best-offers">Best Offers</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="icons">
+            <a href="#"><i class="bx bx-search"></i></a>
+            <a href="#"><i class="bx bxs-user-circle"></i></a>
+        </div>
+    </header>
+
+    <section class="shop" id="shoes">
+        <div class="container">
+            <div class="card">
+                <img src="NIKE.jpeg" alt="NIKE">
+                <div class="content">
+                    <h4><a href="https://www.nike.com/in/" target="_blank">NIKE</a></h4>
+                    <h3>🔥 Exclusive Deals! 🔥</h3>
+                    <p>Up to 50% OFF on latest shoes! Shop now!</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="ADIDAS.png" alt="ADIDAS">
+                <div class="content">
+                    <h4><a href="https://www.adidas.co.in/" target="_blank">ADIDAS</a></h4>
+                    <h3>🎉 Big Sale! 🎉</h3>
+                    <p>Massive discounts on all products. Don’t miss out!</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="BATA.png" alt="BATA">
+                <div class="content">
+                    <h4><a href="https://www.bata.com/in/sale/" target="_blank">BATA</a></h4>
+                    <h3>💥 Mega Sale! 💥</h3>
+                    <p>Unbeatable prices on shoes. Limited time only!</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="puma.jpeg" alt="PUMA">
+                <div class="content">
+                    <h4><a href="https://in.puma.com/in/en" target="_blank">PUMA</a></h4>
+                    <h3>🔥 Hot Deals! 🔥</h3>
+                    <p>Get up to 40% OFF on select items!</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="SKETCHERS.jpeg" alt="SKETCHERS">
+                <div class="content">
+                    <h4><a href="https://www.skechers.in/" target="_blank">SKETCHERS</a></h4>
+                    <h3>🛍️ Flash Sale! 🛍️</h3>
+                    <p>Save big on new arrivals. Shop now!</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="convers1.png" alt="CONVERSE">
+                <div class="content">
+                    <h4><a href="https://www.converse.in/" target="_blank">CONVERSE</a></h4>
+                    <h3>🎈 Limited Offer! 🎈</h3>
+                    <p>Up to 60% OFF on classic styles. Don’t miss out!</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="CROCS.png" alt="CROCS">
+                <div class="content">
+                    <h4><a href="https://www.crocs.in/" target="_blank">CROCS</a></h4>
+                    <h3>💫 Special Sale! 💫</h3>
+                    <p>Huge discounts on all items. Shop now!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="last">
+            <p>© 2024 by Offer Oracle</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menu-icon').addEventListener('click', function() {
+            document.querySelector('.navbar').classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
